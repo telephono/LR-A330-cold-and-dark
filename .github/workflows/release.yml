@@ -15,20 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: actions/setup-node@v4
-        with: 
-          node-version: '14'
+      # - uses: actions/setup-node@v4
+      #   with: 
+      #     node-version: '14'
       
       - name: Create ZIP archive
+        env:
+          tag: ${{ github.ref }}
         run: |
           mkdir -p archive
-          zip -r archive/release.zip LICENSE README.md skunkcrafts_updater.cfg plugins/
+          zip -r archive/Airbus\ A330-300\ Cold\ and\ Dark\ ${tag#v}.zip LICENSE README.md skunkcrafts_updater.cfg plugins/
       
       - name: Release
         uses: softprops/action-gh-release@v2
+        env:
+          tag: ${{ github.ref }}
         with:
           draft: true
           files: |
-            archive/release.zip
-            LICENSE
-            README.md
+            archive/Airbus\ A330-300\ Cold\ and\ Dark\ ${tag#v}.zip
