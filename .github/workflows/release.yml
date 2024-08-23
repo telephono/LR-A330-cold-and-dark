@@ -2,8 +2,8 @@ name: Create Release
 
 on:
   push:
-    # tags:
-      # - 'v*'
+    tags:
+      - 'v*.*.*'
 
 permissions:
   contents: write
@@ -15,10 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # - uses: actions/setup-node@v4
-      #   with: 
-      #     node-version: '14'
-      
       - name: Create ZIP archive
         env:
           tag_name: ${{ github.ref_name }}
@@ -28,9 +24,6 @@ jobs:
       
       - name: Release
         uses: softprops/action-gh-release@v2
-        env:
-          tag_name: ${{ github.ref_name }}
         with:
           draft: true
-          files: |
-            archive/*.zip
+          files: archive/*.zip
