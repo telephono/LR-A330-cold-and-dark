@@ -21,16 +21,16 @@ jobs:
       
       - name: Create ZIP archive
         env:
-          tag: ${{ github.ref }}
+          tag_name: ${{ github.ref_name }}
         run: |
           mkdir -p archive
-          zip -r archive/Airbus\ A330-300\ Cold\ and\ Dark\ ${tag#v}.zip LICENSE README.md skunkcrafts_updater.cfg plugins/
+          zip -r archive/Airbus\ A330-300\ Cold\ and\ Dark\ ${tag_name}.zip LICENSE README.md skunkcrafts_updater.cfg plugins/
       
       - name: Release
         uses: softprops/action-gh-release@v2
         env:
-          tag: ${{ github.ref }}
+          tag_name: ${{ github.ref_name }}
         with:
           draft: true
           files: |
-            archive/Airbus\ A330-300\ Cold\ and\ Dark\ ${tag#v}.zip
+            archive/Airbus\ A330-300\ Cold\ and\ Dark\ ${tag_name}.zip
