@@ -1,4 +1,6 @@
-This changes the Laminar Research Airbus A330-300 overhead panel state to something like the ToLiss A340-600 uses for a cold & dark startup.
+![A330 Overhead Panel](OverheadPanel.png)
+
+This changes the Laminar Research Airbus A330-300 overhead panel state to something more like the ToLiss A340-600 uses for a cold & dark startup.
 
 ## Optional Features
 ### Set PFD, ND, ECAM and MCDU panels to low brightness
