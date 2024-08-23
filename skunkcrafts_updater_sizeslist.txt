@@ -1,0 +1,5 @@
+plugins/xlua/scripts/A333.Z.coldstart/A333.Z.coldstart.lua|7875
+plugins/xlua/scripts/A333.Z.coldstart_low_display_brightness/A333.Z.coldstart_low_display_brightness.lua|1275
+plugins/xlua/scripts/A333.Z.sync_display_brightness_settings/A333.Z.sync_display_brightness_settings.lua|2821
+plugins/xlua/scripts/A333.Z.sync_efis_baro_settings/A333.Z.sync_efis_baro_settings.lua|2464
+plugins/xlua/scripts/A333.Z.sync_efis_fd_ls_settings/A333.Z.sync_efis_fd_ls_settings.lua|1491

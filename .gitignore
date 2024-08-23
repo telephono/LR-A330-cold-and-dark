@@ -1,0 +1,11 @@
+*
+!.gitignore
+!skunkcrafts_updater.cfg
+!skunkcrafts_updater_blacklist.txt
+!skunkcrafts_updater_sizeslist.txt
+!skunkcrafts_updater_whitelist.txt
+!plugins/xlua/scripts/A333.Z.coldstart/A333.Z.coldstart.lua
+!plugins/xlua/scripts/A333.Z.coldstart_low_display_brightness/A333.Z.coldstart_low_display_brightness.lua
+!plugins/xlua/scripts/A333.Z.sync_display_brightness_settings/A333.Z.sync_display_brightness_settings.lua
+!plugins/xlua/scripts/A333.Z.sync_efis_baro_settings/A333.Z.sync_efis_baro_settings.lua
+!plugins/xlua/scripts/A333.Z.sync_efis_fd_ls_settings/A333.Z.sync_efis_fd_ls_settings.lua
