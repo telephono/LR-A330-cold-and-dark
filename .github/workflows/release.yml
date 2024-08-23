@@ -1,0 +1,31 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with: 
+          node-version: '14'
+      
+      - name: Create ZIP archive
+        run: |
+          mkdir -p archive
+          zip -r archive/release.zip LICENSE README.md skunkcrafts_updater.cfg plugins/
+      
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          files: |
+            archive/release.zip
+            LICENSE
+            README.md
