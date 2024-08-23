@@ -33,4 +33,4 @@ jobs:
         with:
           draft: true
           files: |
-            archive/A330-cold-and-dark-${tag_name}.zip
+            archive/*.zip
