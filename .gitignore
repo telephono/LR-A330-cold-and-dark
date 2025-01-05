@@ -10,6 +10,7 @@
 # But not these files...
 !.gitignore
 
+!build_skunkcrafts_updater_files.sh
 !skunkcrafts_updater.cfg
 !skunkcrafts_updater_blacklist.txt
 !skunkcrafts_updater_sizeslist.txt
