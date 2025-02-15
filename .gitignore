@@ -12,6 +12,7 @@
 
 !build_skunkcrafts_updater_files.sh
 !skunkcrafts_updater.cfg
+!skunkcrafts_updater_ignore.txt
 !skunkcrafts_updater_blacklist.txt
 !skunkcrafts_updater_sizeslist.txt
 !skunkcrafts_updater_whitelist.txt

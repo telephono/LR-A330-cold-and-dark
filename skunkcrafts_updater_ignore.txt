@@ -1,0 +1,7 @@
+# Files listed here will be ignored by ./build_skunkcrafts_updater_files.sh
+#
+# For example:
+#plugins/xlua/scripts/A333.Z.coldstart_low_display_brightness/A333.Z.coldstart_low_display_brightness.lua
+#plugins/xlua/scripts/A333.Z.sync_display_brightness_settings/A333.Z.sync_display_brightness_settings.lua
+#plugins/xlua/scripts/A333.Z.sync_efis_baro_settings/A333.Z.sync_efis_baro_settings.lua
+#plugins/xlua/scripts/A333.Z.sync_efis_fd_ls_settings/A333.Z.sync_efis_fd_ls_settings.lua
