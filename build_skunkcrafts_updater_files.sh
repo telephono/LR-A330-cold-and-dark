@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# We only accept a directory as input argument
+if [[ ! -d "$1" ]]; then
+    echo "$1 is not a directory..."
+    exit 1
+fi
+
 # Delete old files
 rm -f skunkcrafts_updater_whitelist.txt || true
 rm -f skunkcrafts_updater_sizeslist.txt || true
@@ -37,7 +43,7 @@ if [[ "${#skunkcrafts_updater_ignore_files[@]}" != 0 ]]; then
 fi
 
 printf "Processing files:\n"
-find ./plugins -type f -print0 | sort -z | while read -rd $'\0' file; do
+find "$1" -type f -print0 | sort -z | while read -rd $'\0' file; do
     # Trim leading ./ if present...
     file=${file/#\.\//}
 
