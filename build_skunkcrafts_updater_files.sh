@@ -1,8 +1,14 @@
 #!/bin/bash
 
+# Check for crc32
+if ! hash crc32 2>/dev/null; then
+    printf "Command not found: crc32.\n"
+    exit 1;
+fi
+
 # We only accept a directory as input argument
 if [[ ! -d "$1" ]]; then
-    printf "%s is not a directory..." "$1"
+    printf "%s is not a directory. Aborting.\n" "$1"
     exit 1
 fi
 
