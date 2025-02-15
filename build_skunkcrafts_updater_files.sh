@@ -2,7 +2,7 @@
 
 # We only accept a directory as input argument
 if [[ ! -d "$1" ]]; then
-    echo "$1 is not a directory..."
+    printf "%s is not a directory..." "$1"
     exit 1
 fi
 
