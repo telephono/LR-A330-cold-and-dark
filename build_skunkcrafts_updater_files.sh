@@ -53,7 +53,7 @@ find "$1" -type f -print0 | sort -z | while read -rd $'\0' file; do
     # Skip files in skunkcrafts_updater_ignore.txt
     ignored=false
     for value in "${skunkcrafts_updater_ignore_files[@]}"; do
-        [[ "$file" == "$value" ]] && ignored=true
+        [[ "$file" == "$value" ]] && ignored=true; break
     done
     [[ $ignored == true ]] && continue
 
